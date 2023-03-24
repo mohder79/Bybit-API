@@ -77,6 +77,7 @@ class Bybit():
             "POST", url, headers=headers, data=json.dumps(params))
 
         return response.json()
+    # TODO cancel order not work
 
     def cancel_order(self, symbol, orderId):
         params = {
@@ -128,28 +129,3 @@ class Bybit():
                 info = False
 
         return info
-
-
-bybit = Bybit(config.api_key, config.api_secret)
-
-
-# print(bybit.instrument_info())
-
-x = bybit.instrument_info('BTCUSDT')
-print(x[0])
-
-
-# buy_limit = bybit.buy_limit('BTCUSDT', "0.001", '17000')
-# print(buy_limit)
-# x = buy_limit['result']['orderId']
-# print('orderLinkId :', buy_limit['result']['orderLinkId'])
-
-# print(x)
-
-# time.sleep(3)
-# cancel_order = bybit.cancel_order(
-#     'BTCUSDT', x)
-# print(cancel_order)
-# sell_limit = bybit.sell_limit('BTCUSDT', "0.001", '40000')
-# print(sell_limit)
-# print(sell_limit['retMsg'])
