@@ -11,7 +11,7 @@ bybit = Bybit(config.api_key, config.api_secret)
 
 ```
 
-After you have provided the API and secret key, you can execute various actions using the Binance API. Here are a few examples:
+After you have provided the API and secret key, you can execute various actions using the Bybit API. Here are a few examples:
 
 # Open a long limit order
 
