@@ -9,9 +9,7 @@ To start using the Binance API with this program, you need to provide your API k
 import config
 from main import Bybit
 
-
 bybit = Bybit(config.api_key, config.api_secret)
-
 
 '''
 
