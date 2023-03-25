@@ -47,7 +47,7 @@ class Bybit():
             "price": price,
             'takeProfit': tp,
             'stopLoss': sl,
-            "api_key": self.api_key, }
+            "api_key": self.api_key,}
 
         headers = self.signature(params)
 
@@ -105,7 +105,22 @@ class Bybit():
         response = requests.request("POST", url, headers=headers, data=params)
 
         return response.json()
-
+    
+    def leverage(self , symbol ,buyLeverage ,sellLeverage ):
+        params = {
+        "symbol": symbol,
+        'category': 'linear',
+        'buyLeverage' : buyLeverage , 
+        'sellLeverage': sellLeverage  , 
+        "api_key": self.api_key,}
+        
+        url = 'https://api.bybit.com/v5/position/set-leverage'
+        headers = self.signature(params)
+        response = requests.request(
+            "POST", url, headers=headers, data=json.dumps(params))      
+        return response.json()  
+        
+        
     def instrument_info(self, symbol):
         url = "https://api-testnet.bybit.com/v5/market/instruments-info?category=linear"
 
