@@ -2,25 +2,16 @@
 
 # How to Use the Bybit API with this Program
 
-To start using the Binance API with this program, you need to provide your API key and secret key to the Bybit class. Here's an example of how to do it :
-
-<<<<<<< HEAD
+To start using the Bybit API with this program, you need to provide your API key and secret key to the Bybit class. Here's an example of how to do it :
 
 ```py
-=======
-```
->>>>>>> efac625acb177bba8d42d977a5123e1f1ac20d59
 import config
 
 bybit = Bybit(config.api_key, config.api_secret)
 
 ```
 
-<<<<<<< HEAD
-After you have provided the API and secret key, you can execute various actions using the Binance API. Here are a few examples:
-=======
 After you have provided the API and secret key, you can execute various actions using the Bybit API. Here are a few examples:
->>>>>>> efac625acb177bba8d42d977a5123e1f1ac20d59
 
 # Open a long limit order
 
@@ -80,7 +71,7 @@ else:
 ```
 
 
-The above code will check if the symbol 'BTCUSDT' exists on the Binance platform and retrieve its instrument information, including minimum leverage, maximum leverage, maximum order quantity, and price tick size. If the symbol exists, the output will be printed to the console. If it doesn't exist, the instrument_info function will return False.
+The above code will check if the symbol 'BTCUSDT' exists on the Bybit platform and retrieve its instrument information, including minimum leverage, maximum leverage, maximum order quantity, and price tick size. If the symbol exists, the output will be printed to the console. If it doesn't exist, the instrument_info function will return False.
 
 
 output :
@@ -93,13 +84,10 @@ output :
  maxOrderQty : 0.001
  
 ```
-<<<<<<< HEAD
-
-
 
 # set leverage
 
-```
+```py
 
 lev = bybit.leverage('BTCUSDT', '11' ,'12')
 
@@ -118,5 +106,3 @@ output:
 ```
 
 The above code will change long leverage to 11 and short leverage to 12. If the leverage is duplicated, with the current response value, the request error code 110043 "Set leverage has not been modified" will be displayed.
-=======
->>>>>>> efac625acb177bba8d42d977a5123e1f1ac20d59
